@@ -12,16 +12,9 @@ struct TopMoversItemView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            // image
-            AsyncImage(url: URL(string: coin.image)) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 32, height: 32)
-                    .foregroundColor(.orange)
-            } placeholder: {
-                ProgressView()
-            }
+            
+            CoinImageView(url: coin.image)
+                .frame(width: 32, height: 32)
             
             // coin info
             HStack(spacing: 2) {

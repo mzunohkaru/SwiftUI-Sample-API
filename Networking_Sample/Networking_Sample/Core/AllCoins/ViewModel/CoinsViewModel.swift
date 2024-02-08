@@ -23,8 +23,6 @@ class CoinsViewModel: ObservableObject {
     
     init(service: CoinServiceProtocol) {
         self.service = service
-        
-        Task { await fetchCoins() }
     }
     
     @MainActor
@@ -33,7 +31,6 @@ class CoinsViewModel: ObservableObject {
             // 非同期で仮想通貨のデータを取得し、取得したデータをcoinsに格納
             let coins = try await service.fetchCoins()
             self.coins.append(contentsOf: coins)
-            
             configureTopMovingCoins()
             
         } catch {

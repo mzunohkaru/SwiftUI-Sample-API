@@ -41,19 +41,8 @@ struct CoinDetailsView: View {
                         
                         Spacer()
                         
-                        // URLデータに変換後、AsyncImageにURLを渡して画像をロード
-                        if let url = URL(string: coin.image) {
-                            
-                            AsyncImage(url: url) { image in
-                                // 取得した画像ビュー
-                                image
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                            } placeholder: {
-                                // プレースホルダーのビュー
-                                ProgressView()
-                            }
-                        }
+                        CoinImageView(url: coin.image)
+                            .frame(width: 64, height: 64)
                     }
                     
                     Text(details.description.descriptionText)

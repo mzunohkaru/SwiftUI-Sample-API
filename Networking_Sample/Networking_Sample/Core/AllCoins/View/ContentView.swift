@@ -31,19 +31,23 @@ struct ContentView: View {
             // all coins view
             AllCoinsView(viewModel: viewModel)
             
-            .navigationDestination(for: Coin.self, destination: { coin in
-                CoinDetailsView(coin: coin, service: service)
-            })
-//            .overlay {
-//                if let error = viewModel.errorMessage {
-//                    Text(error)
-//                }
-//            }
-            .onAppear {
-                if let error = viewModel.errorMessage {
-                    print("DEBUG: Error message \(error)")
+                .navigationDestination(for: Coin.self, destination: { coin in
+                    CoinDetailsView(coin: coin, service: service)
+                })
+            
+            //            .overlay {
+            //                if let error = viewModel.errorMessage {
+            //                    Text(error)
+            //                }
+            //            }
+                .onAppear {
+                    if let error = viewModel.errorMessage {
+                        print("DEBUG: Error message \(error)")
+                    }
                 }
-            }
+        }
+        .task {
+            await viewModel.fetchCoins()
         }
     }
 }

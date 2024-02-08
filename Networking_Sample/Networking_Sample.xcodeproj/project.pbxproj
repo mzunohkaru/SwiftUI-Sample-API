@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8F1B9D642B70721500E03E0D /* CoinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1B9D632B70721500E03E0D /* CoinDetailsView.swift */; };
 		8F1B9D672B70745400E03E0D /* CoinDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1B9D662B70745400E03E0D /* CoinDetails.swift */; };
+		8F2B96842B7469EB0089CF99 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2B96832B7469EB0089CF99 /* ImageLoader.swift */; };
+		8F2B96862B7469F30089CF99 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2B96852B7469F30089CF99 /* ImageCache.swift */; };
+		8F2B96882B7469FC0089CF99 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2B96872B7469FC0089CF99 /* CoinImageView.swift */; };
 		8F9BC0602B56023600935778 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9BC05F2B56023600935778 /* CoinDataService.swift */; };
 		8F9BC0622B56098100935778 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9BC0612B56098100935778 /* Coin.swift */; };
 		8F9BC0652B56739500935778 /* CoinAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9BC0642B56739500935778 /* CoinAPIError.swift */; };
@@ -45,6 +48,9 @@
 /* Begin PBXFileReference section */
 		8F1B9D632B70721500E03E0D /* CoinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsView.swift; sourceTree = "<group>"; };
 		8F1B9D662B70745400E03E0D /* CoinDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetails.swift; sourceTree = "<group>"; };
+		8F2B96832B7469EB0089CF99 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		8F2B96852B7469F30089CF99 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		8F2B96872B7469FC0089CF99 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		8F9BC05F2B56023600935778 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		8F9BC0612B56098100935778 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		8F9BC0642B56739500935778 /* CoinAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAPIError.swift; sourceTree = "<group>"; };
@@ -124,6 +130,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8F2B96822B7469C10089CF99 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8F2B96832B7469EB0089CF99 /* ImageLoader.swift */,
+				8F2B96852B7469F30089CF99 /* ImageCache.swift */,
+				8F2B96872B7469FC0089CF99 /* CoinImageView.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		8F9BC05E2B56022100935778 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +168,7 @@
 		8FA3D97B2B71DF23005F72BA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8F2B96822B7469C10089CF99 /* Images */,
 				8FA3D97C2B71DF2A005F72BA /* API */,
 			);
 			path = Shared;
@@ -384,10 +401,13 @@
 				8F9BC0652B56739500935778 /* CoinAPIError.swift in Sources */,
 				8FA3D9BD2B7256B8005F72BA /* Double.swift in Sources */,
 				8FA3D9812B71E5B3005F72BA /* CoinDetailsCache.swift in Sources */,
+				8F2B96882B7469FC0089CF99 /* CoinImageView.swift in Sources */,
 				8FA3D97A2B71CB6D005F72BA /* CoinDetailsViewModel.swift in Sources */,
 				8FA3D9972B7213F0005F72BA /* TestData.swift in Sources */,
 				8F1B9D642B70721500E03E0D /* CoinDetailsView.swift in Sources */,
 				8F9BC0602B56023600935778 /* CoinDataService.swift in Sources */,
+				8F2B96842B7469EB0089CF99 /* ImageLoader.swift in Sources */,
+				8F2B96862B7469F30089CF99 /* ImageCache.swift in Sources */,
 				8FA3D97E2B71DF3E005F72BA /* HTTPDataDownloader.swift in Sources */,
 				8FA3D9B82B725672005F72BA /* TopMoversView.swift in Sources */,
 				8FA3D9BA2B725687005F72BA /* TopMoversItemView.swift in Sources */,

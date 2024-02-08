@@ -18,19 +18,8 @@ struct CoinRowView: View {
                 Text("\(coin.marketCapRank)")
                     .foregroundColor(.gray)
                 
-                // URLデータに変換後、AsyncImageにURLを渡して画像をロード
-                if let url = URL(string: coin.image) {
-                    
-                    AsyncImage(url: url) { image in
-                        // 取得した画像ビュー
-                        image
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                    } placeholder: {
-                        // プレースホルダーのビュー
-                        ProgressView()
-                    }
-                }
+                CoinImageView(url: coin.image)
+                    .frame(width: 32, height: 32)
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(coin.name)
